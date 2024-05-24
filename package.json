@@ -1,0 +1,36 @@
+{
+  "name": "gjtech-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.18",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "babel-plugin-styled-components": "^2.1.4",
+    "emailjs-com": "^3.2.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^4.11.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
+    "styled-components": "^6.1.11",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/webfontloader": "^1.6.35",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  }
+}
