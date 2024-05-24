@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import styled from 'styled-components';
 import Slogan from './components/slogan/slogan';
@@ -22,11 +22,11 @@ const MyComponent = () => {
         <main>
           <Slogan></Slogan>
           <Section>
-            <Services></Services>
+            <Services />
             <Diferenciais></Diferenciais>
             <Parceiros></Parceiros>
             <Entrega></Entrega>
-            <Contact></Contact>
+            <Contact />
             <Footer></Footer>
           </Section>
         </main>

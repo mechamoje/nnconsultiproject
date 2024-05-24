@@ -1,6 +1,7 @@
+// actions.js
 import { servicesActionTypes } from "./action-types";
 
-export const serviceTitle = (payload) => ({
-        type: servicesActionTypes.SERVICE,
-        payload: payload
-})
+export const serviceTitle = (title) => ({
+    type: servicesActionTypes.SERVICE,
+    payload: title,
+});

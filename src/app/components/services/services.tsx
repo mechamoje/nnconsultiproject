@@ -15,6 +15,7 @@ import { PiPuzzlePiece, PiComputerTowerBold } from "react-icons/pi"
 import ServicesIcon from "./servicesIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { serviceTitle } from "../../../redux/services/actions";
+import { useRef } from "react";
 
 const servicesList = [
     { icon: <VscSymbolStructure />, title: "Infraestrutura" },
@@ -43,12 +44,10 @@ const servicesList = [
 export default function Services() {
 
     const dispatch = useDispatch();
-    const { title } = useSelector((rootReducer) => rootReducer.serviceReducer)
-
-    console.log(title)
+    const { title } = useSelector((rootReducer: any) => rootReducer.servicesReducer)
 
     const handleServiceClick = () => {
-        dispatch(serviceTitle())
+        dispatch(serviceTitle());
     }
 
 

@@ -67,29 +67,7 @@ export const Contact = () => {
 
     return (
         <Section id='form'>
-<<<<<<< Updated upstream
-            <figure>
-                <Image
-                    src="/contact.svg"
-                    width={size}
-                    height={size}
-                    alt="Picture of the author"
-                />
-            </figure>
-
-=======
-            {/* 
->>>>>>> Stashed changes
-            <Form onSubmit={handleSubmit} id='form'>
-                <label> Nome da empresa: </label>
-                <input type="text" name="user_name" value={user_name} onChange={handleChange} placeholder="GJTech" />
-                <label> Email: </label>
-                <input type="email" name="user_email" value={user_email} onChange={handleChange} placeholder="george@gjtech.com.br" />
-                <label> Como podemos te ajudar? </label>
-                <textarea name="message" value={message} onChange={handleChange} placeholder="Gostaria de informações sobre suas condições comerciais" />
-                <StyledButton onSubmit={handleSubmit} type="submit"> Enviar </StyledButton>
-            </Form> */}
-            <Form onSubmit={handleSubmit} id='form'>
+            < Form onSubmit={handleSubmit} id='form' >
                 <InputsContainers>
                     <InputLabel htmlFor="my-input">Nome da empresa:</InputLabel>
                     <Input fullWidth id="my-input" aria-describedby="my-helper-text" name="user_name" value={user_name} onChange={handleChange} placeholder="NNConsulti" />
@@ -105,7 +83,7 @@ export const Contact = () => {
                 </InputsContainers>
 
                 <Button onSubmit={handleSubmit} type="submit" text={"Enviar"} />
-            </Form>
+            </Form >
             <figure>
                 <Image
                     src="/contact.svg"
@@ -114,7 +92,7 @@ export const Contact = () => {
                     alt="Ilustração com imagens de e-mail e celular"
                 />
             </figure>
-        </Section>
+        </Section >
 
     );
 };
