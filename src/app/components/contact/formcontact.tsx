@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { colors } from '../ui/theme';
+import { colors, shadows } from '../ui/theme';
 import {
   FormControl,
   FormHelperText,
@@ -72,9 +72,9 @@ export const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_sal12fr',
-        'template_78nsy7i',
-        '#form',
+        'service_uofhok1',
+        'template_8jc32ye',
+        '#myform',
         'w19xbDkAnMHMiJUfb'
       )
       .then(
@@ -85,7 +85,7 @@ export const Contact = () => {
         },
         () => {
           window.alert(
-            'Erro ao enviar sua mensagem. ❌ Por favor tente novamente ou nos contate via whatsapp (81)9 9162-0892.'
+            'Erro ao enviar sua mensagem. ❌ Por favor tente novamente ou nos contate via whatsapp (41) 98786-6558.'
           );
         }
       );
@@ -93,7 +93,7 @@ export const Contact = () => {
 
   return (
     <Section id='form'>
-      <Form onSubmit={handleSubmit} id='form'>
+      <Form onSubmit={handleSubmit} id='myform'>
         <InputsContainers>
           <InputLabel htmlFor='my-input'>Nome da empresa:</InputLabel>
           <Input
@@ -172,14 +172,19 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background-color: ${colors.lighterGray};
+  background-color: ${colors.white};
   padding: 14px;
   border-radius: 10px;
   height: 80%;
   justify-content: inherit;
 
+  label, input {
+    font-family: 'DM Sans', sans-serif !important;
+  }
+
   input {
     padding: 10px;
+    box-shadow: ${shadows.inputsShadow};
   }
 
   input[name='message'] {

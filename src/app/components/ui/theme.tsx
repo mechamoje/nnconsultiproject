@@ -11,6 +11,7 @@
 
 const colors = {
   lightYellow: '#FFFFCC',
+  darkYellow: '#D5B60A',
   yellow: '#FFFF00',
   gray: '#63635E',
   lightGray: '#B4B4B3',
@@ -24,6 +25,8 @@ const shadows = {
   textShadow: '0.5px 1.5px 2px #757879',
   sloganBoxShadow: '0px 2px 5px 1px #3B3C3D',
   boxShadow: '3px 4px 6px -3px #757879',
+  boxesShadow: '0px 5px 8px -3px #757879',
+  inputsShadow: '0px 5px 10px -5px #757879',
 };
 
 const links = {

@@ -225,7 +225,7 @@ const Header = styled.header<{ isOpenProp: boolean }>`
 `;
 const Article = styled.article`
     display: flex;
-    gap: 40px;
+    gap: 5%;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -233,13 +233,14 @@ const Article = styled.article`
     text-align: left;
     justify-self: center;
     padding-block: 10%;
+    box-sizing: border-box;
     
     h2 {
-        font-family: 'DM Serif Display', serif;
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
         font-size: 64px;
         margin: 0;
         text-transform: uppercase;
-        font-weight: 400;
     }
 
     p {
@@ -247,17 +248,17 @@ const Article = styled.article`
         text-align: center;
         font-family: 'DM Sans', sans-serif;
         font-size: 32px;
-        font-weight: 100;
+        font-weight: 400;
         letter-spacing: 0.2px;
     }
 
     @media (max-width: 768px){
-        align - items: center;
-    align-content: center;
-    text-align: center;
-    width: auto;
-    margin: 0;
-    padding-block: 5%;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        width: auto;
+        margin: 0;
+        padding-block: 5%;
     }
 }
 `;

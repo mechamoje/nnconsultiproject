@@ -160,7 +160,7 @@ export default function Parceiros() {
         <SwiperSlide>
           {' '}
           <Image
-            src='/9.png'
+            src='/9.jpg'
             width={280}
             height={125}
             alt='Picture of the author'

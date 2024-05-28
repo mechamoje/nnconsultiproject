@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { RiWhatsappFill } from 'react-icons/ri';
-import { colors } from '../ui/theme';
+import { RiWhatsappFill, RiLinkedinBoxFill } from 'react-icons/ri';
+import { colors, links } from '../ui/theme';
 
 export default function Services() {
   return (
     <Footer>
       <div>
         <h3> NN Consulti </h3>
-        <a href='https://api.whatsapp.com/send?phone=5581991620892&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:%20'>
+        <a href={links.whatsappLink}>
           {' '}
           <RiWhatsappFill color={'white'} size={50} />
         </a>
-        <a href='https://api.whatsapp.com/send?phone=5581991620892&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:%20'>
-          {' '}
-          <RiWhatsappFill color={'white'} size={50} />
+        <a href={links.linkedinLink} target='blank'>
+          <RiLinkedinBoxFill color={'white'} size={45} />
         </a>
       </div>
 
@@ -37,12 +36,39 @@ const Footer = styled.footer`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   padding: 0;
   margin: 0;
-  display: flex;
-  padding-inline: 10%;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-end;
   align-items: center;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 1px;
+
+  div:first-child {
+    justify-self: center;
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  div:last-child {
+    justify-self: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    font-size: 44px;
+    color: ${colors.white};
+    margin-block: 8px;
+  }
 
   @media (max-width: 768px) {
     align-items: center;

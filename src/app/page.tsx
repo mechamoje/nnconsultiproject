@@ -17,6 +17,10 @@ import store from './../redux/store';
 const MyComponent = () => {
   return (
     <Provider store={store}>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap');
+      </style>
+
       <Body>
         <main>
           <Slogan></Slogan>

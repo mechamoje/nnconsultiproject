@@ -11,7 +11,7 @@ export default function Diferenciais() {
     <Section id='differences'>
       <SectionTitle
         title='Diferenciais'
-        subtitle='Por que escolher a GJTech?'
+        subtitle='Por que escolher a NN consulti?'
       ></SectionTitle>
       <DifferencesList>
         <DifferencesItem>
@@ -39,7 +39,7 @@ export default function Diferenciais() {
           <h4> Soluções </h4>
           <p>
             {' '}
-            Mais completas soluções para os mais DifferencesItemersos segmentos
+            Mais completas soluções para os mais diferentes segmentos
           </p>
         </DifferencesItem>
       </DifferencesList>
@@ -67,7 +67,7 @@ const DifferencesList = styled.div`
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 66px;
   margin-bottom: 64px;
@@ -87,15 +87,17 @@ const DifferencesItem = styled.article`
   text-align: center;
   color: ${colors.black};
   width: 20em;
+  font-family: 'DM Sans', sans-serif;
 
   h4 {
-    // font:  .textTitle};
     margin-top: 16px;
     margin-bottom: 8px;
+
+    font-size: 24px;
   }
 
   p {
-    // font:  .text};
+    font-size: 18px;
     margin: 0;
     padding: 0;
   }

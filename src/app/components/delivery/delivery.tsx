@@ -77,6 +77,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: 'DM Sans', sans-serif;
 
   small {
     margin-top: 3%;

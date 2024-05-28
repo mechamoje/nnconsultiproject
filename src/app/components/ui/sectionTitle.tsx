@@ -25,18 +25,22 @@ const Article = styled.article`
   justify-content: center;
   gap: 16px;
   margin-block: 64px;
+
   color: ${colors.black};
 `;
 
 const Title = styled.h3`
-  // font: sectionTitle;
+  font-family: "DM Serif Display", serif;
+  font-size: 32px;
+  letter-spacing: 1px;
   text-shadow: ${shadows.textShadow};
   margin: 0;
   padding: 0;
 `;
 
 const Subtitle = styled.p`
-  // font:  .sectionSubtitle};
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
   margin: 0;
   padding: 0;
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../ui/theme';
+import { colors, shadows } from '../ui/theme';
 import { ReactElement, JSXElementConstructor, FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { serviceTitle } from '@/redux/services/actions';
@@ -43,16 +43,19 @@ const IconContainer = styled.div`
     width: 74px;
     height: 38px;
     background-color: ${colors.white};
-    border-radius: 50%;
+    border-radius: 20%;
+    box-shadow: ${shadows.boxesShadow};
     padding: 10px;
 
     &:hover {
-      color: ${colors.yellow};
+      color: ${colors.darkYellow};
     }
   }
 
   span {
     margin-top: 24px;
+    font-family: 'DM Sans', sans-serif;
     font-size: 20px;
+    font-weight: 550;
   }
 `;
