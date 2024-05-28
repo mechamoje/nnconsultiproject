@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useEffect, useRef } from 'react';
 
 import styled from 'styled-components';
@@ -11,11 +11,10 @@ import { Contact } from './components/contact/formcontact';
 import Footer from './components/footer/footer';
 import Head from 'next/head';
 import { colors } from './components/ui/theme';
-import { Provider } from "react-redux";
-import store from "./../redux/store";
+import { Provider } from 'react-redux';
+import store from './../redux/store';
 
 const MyComponent = () => {
-
   return (
     <Provider store={store}>
       <Body>
@@ -32,20 +31,19 @@ const MyComponent = () => {
         </main>
       </Body>
     </Provider>
-
   );
 };
 
 export default MyComponent;
 
 const Body = styled.body`
-          margin: 0;
-          padding: 0;
-          background-color: ${colors.lightYellow};
-          `
+  margin: 0;
+  padding: 0;
+  background-color: ${colors.lightYellow};
+`;
 
 const Section = styled.section`
-          display: flex;
-          flex-direction: column;
-          gap: 5em;
-          `
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+`;

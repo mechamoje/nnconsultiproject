@@ -1,17 +1,16 @@
-import { servicesActionTypes } from "./action-types";
+import { servicesActionTypes } from './action-types';
 
 const initialState = {
-    title: null
-}
-
+  title: null,
+};
 
 const servicesReducer = (state = initialState, action) => {
-    switch(action.type){
-        case servicesActionTypes.SERVICE:
-            return { ...state, title: action.payload}
-        default:
-            return state;
-    }
-}
+  switch (action.type) {
+    case servicesActionTypes.SERVICE:
+      return { ...state, title: action.payload };
+    default:
+      return state;
+  }
+};
 
 export default servicesReducer;

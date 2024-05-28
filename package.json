@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -31,6 +32,7 @@
     "@types/webfontloader": "^1.6.35",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "prettier": "^3.2.5",
     "typescript": "latest"
   }
 }
