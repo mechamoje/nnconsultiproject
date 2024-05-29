@@ -24,15 +24,20 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
                     <li>
                         <Image
                             src='/logo1.svg'
-                            width={60}
-                            height={60}
+                            width={50}
+                            height={50}
                             alt='Logo NN Consulti'
-                        />{' '}
+                        />
                     </li>
                     <li>
-                        <a href='https://api.whatsapp.com/send?phone=5581991620892&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:%20'>
-                            <RiWhatsappFill color={'black'} size={60} />
-                        </a>{' '}
+                        <a href={links.whatsappLink}>
+                            <RiWhatsappFill color={'#5aa81d'} size={40} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href={links.linkedinLink}>
+                            <RiLinkedinBoxFill color={'#247bba'} size={40} />
+                        </a>
                     </li>
                 </ul>
                 <MobileMenuButton onClick={toggleMenu}>
@@ -47,7 +52,7 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
                             width={60}
                             height={60}
                             alt='Logo NN Consulti'
-                        />{' '}
+                        />
                     </li>
                 </ul>
                 <ul>
@@ -125,7 +130,7 @@ const Section = styled.section`
 
     @media (max-width: 768px){
         background - image: url("../../../../static/bg-footer.svg");
-    padding-inline: 14px;
+        padding-inline: 14px;
     }
     `;
 
@@ -145,6 +150,7 @@ const MobileHeader = styled.div`
     margin: 0;
     padding: 0;
     gap: 10%;
+    width: 100%;
   }
 `;
 
@@ -207,6 +213,7 @@ const Header = styled.header<{ isOpenProp: boolean }>`
     width: 50%;
     top: 15px;
     box-shadow: ${shadows.boxShadow};
+    height: 50%;
 
     ul {
         text-align: center;
@@ -217,6 +224,7 @@ const Header = styled.header<{ isOpenProp: boolean }>`
 
       li a {
         color: ${colors.darkYellow};
+        font-size: 20px;
       }
     }
 
