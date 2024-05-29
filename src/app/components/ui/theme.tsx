@@ -10,7 +10,7 @@
 // };
 
 const colors = {
-  lightYellow: '#FAE29C',
+  lightYellow: '#F8F64C',
   darkYellow: '#D5B60A',
   yellow: '#FFFF00',
   gray: '#63635E',
