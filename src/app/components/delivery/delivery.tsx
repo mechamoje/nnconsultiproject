@@ -3,6 +3,7 @@ import Button from '../ui/button';
 import SectionTitle from '../ui/sectionTitle';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { links } from '../ui/theme';
 
 export default function Entrega() {
   const [size, setSize] = useState(500);
@@ -34,13 +35,14 @@ export default function Entrega() {
 
         <Button
           text='Entre em contato'
-          url='https://api.whatsapp.com/send?phone=5581991620892&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:%20'
+          url={links.whatsappLink}
+          target
         ></Button>
         <small> Exceto para a região Norte. </small>
       </Container>
       <figure>
         <Image
-          src='/mapaazul.svg'
+          src='/mapa.svg'
           width={size}
           height={size}
           alt='Picture of the author'

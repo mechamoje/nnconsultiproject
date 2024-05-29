@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -14,15 +14,17 @@ import Button from '../ui/button';
 import { useSelector } from 'react-redux';
 
 export const Contact = () => {
+
+  const form: any = useRef();
   const { title } = useSelector(
     (rootReducer: any) => rootReducer.servicesReducer
   );
 
-  const [size, setSize] = useState(600);
+  const [size, setSize] = useState(500);
 
   useEffect(() => {
     const handleResize = () => {
-      setSize(window.innerWidth < 768 ? 380 : 600);
+      setSize(window.innerWidth < 768 ? 300 : 500);
     };
 
     window.addEventListener('resize', handleResize);
@@ -36,8 +38,8 @@ export const Contact = () => {
   const formText = `Olá, gostaria de mais informações sobre ${title || 'seus serviços'}`;
 
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
+    name: '',
+    email: '',
     message: formText,
   });
 
@@ -48,7 +50,7 @@ export const Contact = () => {
     }));
   }, [title]);
 
-  const { user_name, user_email, message } = formData;
+  const { name, email, message } = formData;
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -60,22 +62,27 @@ export const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (user_name === '' || user_email === '' || message === '') {
+    if (name === '' || email === '' || message === '' && form) {
       return alert('Por favor, preencha todos os campos do formulário.');
     } else {
       sendEmail(e);
-      console.log('Formulário enviado:', formData);
+      setFormData({
+        name: '',
+        email: '',
+        message: formText,
+      });
     }
   };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+
     emailjs
       .sendForm(
-        'service_uofhok1',
-        'template_8jc32ye',
-        '#myform',
-        'w19xbDkAnMHMiJUfb'
+        "service_4t6bv2j",
+        "template_8jc32ye",
+        form.current,
+        "RCq0RHnaSdjRp5ISW"
       )
       .then(
         () => {
@@ -89,19 +96,21 @@ export const Contact = () => {
           );
         }
       );
+
   };
 
   return (
     <Section id='form'>
-      <Form onSubmit={handleSubmit} id='myform'>
+      <Form onSubmit={handleSubmit} ref={form}>
+        <h2>Entre em contato</h2>
         <InputsContainers>
           <InputLabel htmlFor='my-input'>Nome da empresa:</InputLabel>
           <Input
             fullWidth
             id='my-input'
             aria-describedby='my-helper-text'
-            name='user_name'
-            value={user_name}
+            name='name'
+            value={name}
             onChange={handleChange}
             placeholder='NNConsulti'
           />
@@ -112,8 +121,8 @@ export const Contact = () => {
             fullWidth
             id='my-input'
             aria-describedby='my-helper-text'
-            name='user_email'
-            value={user_email}
+            name='email'
+            value={email}
             onChange={handleChange}
             placeholder='nildete@nnconsulti.com.br'
           />
@@ -155,16 +164,21 @@ const Section = styled.section`
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
+  gap: 10%;
   margin-inline: 10%;
 
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
     padding: 0;
-    padding-inline: 10%;
     align-items: center;
     align-self: stretch;
+    flex-direction: column;
+    gap: 25%;
+
+    form {
+      width: 100%;
+    }
   }
 `;
 
@@ -175,11 +189,20 @@ const Form = styled.form`
   background-color: ${colors.white};
   padding: 14px;
   border-radius: 10px;
-  height: 80%;
+  height: 90%;
   justify-content: inherit;
+
+  h2 {
+    text-align: center;
+    color: ${colors.darkYellow};
+    font-size: 32px;
+    margin-top: 0px;
+  }
 
   label, input {
     font-family: 'DM Sans', sans-serif !important;
+    font-size: 18px;
+    color: ${colors.black};
   }
 
   input {
@@ -189,6 +212,13 @@ const Form = styled.form`
 
   input[name='message'] {
     height: 3.4375em !important;
+  }
+  button {
+    background-color: ${colors.yellow};
+  }
+
+  button:hover {
+    background-color: ${colors.darkYellow};
   }
 `;
 

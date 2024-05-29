@@ -10,7 +10,7 @@
 // };
 
 const colors = {
-  lightYellow: '#FFFFCC',
+  lightYellow: '#FAE29C',
   darkYellow: '#D5B60A',
   yellow: '#FFFF00',
   gray: '#63635E',
@@ -21,7 +21,7 @@ const colors = {
 };
 
 const shadows = {
-  titleShadow: '1px 2px 3px #000',
+  titleShadow: '0px 3px 3px #D5B60A',
   textShadow: '0.5px 1.5px 2px #757879',
   sloganBoxShadow: '0px 2px 5px 1px #3B3C3D',
   boxShadow: '3px 4px 6px -3px #757879',

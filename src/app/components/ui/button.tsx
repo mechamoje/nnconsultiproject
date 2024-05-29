@@ -9,6 +9,7 @@ type Props = {
   children?: ReactNode;
   isUppercase?: boolean;
   onSubmit?: (e: any) => void;
+  target?: boolean
 };
 
 const Button: FunctionComponent<Props> = ({
@@ -17,9 +18,10 @@ const Button: FunctionComponent<Props> = ({
   type,
   isUppercase,
   onSubmit,
+  target
 }) => (
   <StyledButton isUppercase={isUppercase} onSubmit={onSubmit}>
-    <a href={url}> {text}</a>
+    <a href={url} target={target ? '_blank' : ''}> {text}</a>
   </StyledButton>
 );
 

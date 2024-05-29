@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import SectionTitle from '../ui/sectionTitle';
-import { colors } from '../ui/theme';
+import { colors, links, shadows } from '../ui/theme';
 import { BiSolidTruck } from 'react-icons/bi';
 import { FaClipboardList } from 'react-icons/fa';
 import { TbView360 } from 'react-icons/tb';
 import Button from '../ui/button';
+import Image from 'next/image';
 
 export default function Diferenciais() {
   return (
@@ -15,30 +16,39 @@ export default function Diferenciais() {
       ></SectionTitle>
       <DifferencesList>
         <DifferencesItem>
-          <BiSolidTruck color={colors.gray} size={100}></BiSolidTruck>
+          <Image
+            src='/D1.svg'
+            width={300}
+            height={200}
+            alt='Picture of the author'
+          />
           <h4> Despacho imediato </h4>
           <p> Despachamos seu pedido em até 48hrs após a confirmação </p>
         </DifferencesItem>
 
         <DifferencesItem>
-          <FaClipboardList color={colors.gray} size={100}>
-            {' '}
-          </FaClipboardList>
+          <Image
+            src='/d2.svg'
+            width={300}
+            height={200}
+            alt='Picture of the author'
+          />
           <h4> Condições exclusivas </h4>
           <p>
-            {' '}
             Condições exclusivas para empresas: faturamos o seu boleto em até
-            180 dias{' '}
+            180 dias
           </p>
         </DifferencesItem>
 
         <DifferencesItem>
-          <TbView360 color={colors.gray} size={100}>
-            {' '}
-          </TbView360>
+          <Image
+            src='/d3.svg'
+            width={300}
+            height={200}
+            alt='Picture of the author'
+          />
           <h4> Soluções </h4>
           <p>
-            {' '}
             Mais completas soluções para os mais diferentes segmentos
           </p>
         </DifferencesItem>
@@ -46,7 +56,8 @@ export default function Diferenciais() {
 
       <Button
         text='Conheça nossas condições'
-        url='https://api.whatsapp.com/send?phone=5581991620892&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre:%20'
+        url={links.whatsappLink}
+        target
       ></Button>
     </Section>
   );
@@ -55,11 +66,13 @@ export default function Diferenciais() {
 const Section = styled.section`
   margin: auto;
   display: flex;
+  width: 100%;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 `;
 
 const DifferencesList = styled.div`
@@ -69,11 +82,13 @@ const DifferencesList = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 66px;
   margin-bottom: 64px;
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 34px;
   }
 `;
 
@@ -86,7 +101,8 @@ const DifferencesItem = styled.article`
   flex-wrap: nowrap;
   text-align: center;
   color: ${colors.black};
-  width: 20em;
+  width: 100%;
+  box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
 
   h4 {
@@ -99,6 +115,7 @@ const DifferencesItem = styled.article`
   p {
     font-size: 18px;
     margin: 0;
+    width: 80%;
     padding: 0;
   }
 `;

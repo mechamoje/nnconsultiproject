@@ -27,15 +27,20 @@ const Article = styled.article`
   margin-block: 64px;
 
   color: ${colors.black};
+
+  @media (max-width: 768px) {
+    margin-block: 44px;
+  }
 `;
 
 const Title = styled.h3`
   font-family: "DM Serif Display", serif;
   font-size: 32px;
   letter-spacing: 1px;
-  text-shadow: ${shadows.textShadow};
+  text-shadow: ${shadows.titleShadow};
   margin: 0;
   padding: 0;
+  color: ${colors.black};
 `;
 
 const Subtitle = styled.p`
@@ -43,4 +48,9 @@ const Subtitle = styled.p`
   font-size: 24px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    text-align: center;
+  }
 `;

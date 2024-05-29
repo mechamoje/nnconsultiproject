@@ -9,11 +9,11 @@ export default function Services() {
     <Footer>
       <div>
         <h3> NN Consulti </h3>
-        <a href={links.whatsappLink}>
+        <a href={links.whatsappLink} target='_blank'>
           {' '}
           <RiWhatsappFill color={'white'} size={50} />
         </a>
-        <a href={links.linkedinLink} target='blank'>
+        <a href={links.linkedinLink} target='_blank'>
           <RiLinkedinBoxFill color={'white'} size={45} />
         </a>
       </div>
@@ -71,10 +71,14 @@ const Footer = styled.footer`
   }
 
   @media (max-width: 768px) {
+    h3 {
+      display: none;
+    }
+    display: flex;
     align-items: center;
     flex-direction: column;
     gap: 2em;
-    padding-bottom: 2%;
+    padding-block: 5%;
   }
 `;
 

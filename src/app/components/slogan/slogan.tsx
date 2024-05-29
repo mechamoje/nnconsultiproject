@@ -93,9 +93,8 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
                     isUppercase={true}
                     text='Entre em contato'
                     url={links.whatsappLink}
-                >
-                    {' '}
-                </Button>
+                    target
+                />
             </Article>
         </Section>
     );
@@ -160,7 +159,7 @@ const MobileMenuButton = styled.button`
   z-index: 98;
 
   svg {
-    color: ${colors.yellow} !important;
+    color: ${colors.darkYellow} !important;
   }
 `;
 
@@ -203,18 +202,21 @@ const Header = styled.header<{ isOpenProp: boolean }>`
     z-index: 99;
     background-color: ${colors.white};
     padding: 10px;
-    right: 5.5em;
+    right: 20%;
+    margin: auto;
+    width: 50%;
     top: 15px;
     box-shadow: ${shadows.boxShadow};
 
     ul {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr);
-      text-align: center;
-      justify-items: center;
+        text-align: center;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        align-items: center;
 
       li a {
-        color: ${colors.yellow};
+        color: ${colors.darkYellow};
       }
     }
 
@@ -259,6 +261,15 @@ const Article = styled.article`
         width: auto;
         margin: 0;
         padding-block: 5%;
+
+        h2 {
+            font-size: 34px;
+        }
+
+        p {
+            font-size: 24px;
+            width: 100%;
+        }
     }
 }
 `;

@@ -8,7 +8,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styled from 'styled-components';
-import { colors } from '../ui/theme';
+import { colors, shadows } from '../ui/theme';
 
 export default function Parceiros() {
   const [delay, setDelay] = useState(1000);
@@ -211,4 +211,9 @@ const Section = styled.section`
   background-color: ${colors.white};
   padding-bottom: 30px;
   text-align: center;
+
+  h3 {
+    color: ${colors.darkYellow};
+    text-shadow: none;
+  }
 `;

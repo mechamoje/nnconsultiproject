@@ -39,16 +39,19 @@ const IconContainer = styled.div`
   flex-direction: column;
   padding-block: 10px;
 
-  svg {
+   svg {
     width: 74px;
     height: 38px;
     background-color: ${colors.white};
     border-radius: 20%;
     box-shadow: ${shadows.boxesShadow};
     padding: 10px;
+    color: ${colors.darkYellow};
+    fill: ${colors.darkYellow};
 
     &:hover {
-      color: ${colors.darkYellow};
+      color: ${colors.gray};
+      fill: ${colors.gray};
     }
   }
 
@@ -57,5 +60,10 @@ const IconContainer = styled.div`
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
     font-weight: 550;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 `;

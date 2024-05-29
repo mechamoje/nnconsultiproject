@@ -6,7 +6,7 @@ import { VscSymbolStructure } from 'react-icons/vsc';
 import { PiTreeStructureDuotone } from 'react-icons/pi';
 import { TbSettingsAutomation, TbLicense } from 'react-icons/tb';
 import { MdAppSettingsAlt } from 'react-icons/md';
-import { GrTechnology } from 'react-icons/gr';
+import { LiaNetworkWiredSolid } from "react-icons/lia";
 import { IoGitNetwork, IoCartOutline } from 'react-icons/io5';
 import { IoIosSwitch } from 'react-icons/io';
 import { BsFillDatabaseFill } from 'react-icons/bs';
@@ -23,7 +23,7 @@ const servicesList = [
   { icon: <PiTreeStructureDuotone />, title: 'Conectividade' },
   { icon: <MdAppSettingsAlt />, title: 'Softwares' },
   { icon: <FaComputer />, title: 'Computadores' },
-  { icon: <GrTechnology />, title: 'TI' },
+  { icon: <LiaNetworkWiredSolid />, title: 'TI' },
   { icon: <IoGitNetwork />, title: 'Redes' },
   { icon: <IoIosSwitch />, title: 'Switches' },
   { icon: <FaServer />, title: 'Servidores' },
@@ -71,7 +71,9 @@ const ServicesList = styled.div`
   gap: 28px;
 
   @media (max-width: 768px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
     flex-direction: column;
+    gap: 10px;
   }
 `;
