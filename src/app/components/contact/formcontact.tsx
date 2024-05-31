@@ -20,11 +20,11 @@ export const Contact = () => {
     (rootReducer: any) => rootReducer.servicesReducer
   );
 
-  const [size, setSize] = useState(500);
+  const [size, setSize] = useState(650);
 
   useEffect(() => {
     const handleResize = () => {
-      setSize(window.innerWidth < 768 ? 300 : 500);
+      setSize(window.innerWidth < 768 ? 400 : 650);
     };
 
     window.addEventListener('resize', handleResize);
@@ -164,7 +164,7 @@ const Section = styled.section`
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
-  gap: 10%;
+  gap: 5%;
   margin-inline: 10%;
 
   @media (max-width: 768px) {

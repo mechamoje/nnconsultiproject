@@ -91,8 +91,8 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
             <Article>
                 <h2>NN Consulti</h2>
                 <p>
-                    Uma empresa criada para facilitar a vida daqueles que vivem e respiram
-                    Tech dia após dia.
+                    Tecnologia e inovação? <br />
+                    A NN Consulti tem a solução. <br /> Venha já tomar um café com os nossos especialistas!
                 </p>
                 <Button
                     isUppercase={true}
@@ -101,7 +101,7 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
                     target
                 />
             </Article>
-        </Section>
+        </Section >
     );
 };
 
@@ -115,7 +115,7 @@ const Section = styled.section`
     width: 100%;
 
     background-image: url("../../../../static/bg.svg");
-    max-height: 32em;
+    max-height: 35em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
