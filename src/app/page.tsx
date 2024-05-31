@@ -18,11 +18,6 @@ import './/app.css'
 const MyComponent = () => {
   return (
     <Provider store={store}>
-      <Head>
-        <title>NN Consulti</title>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      </ Head>
-
       <Body>
         <main>
           <Slogan></Slogan>

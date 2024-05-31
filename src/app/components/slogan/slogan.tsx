@@ -19,6 +19,7 @@ const Slogan: FunctionComponent<Props> = ({ isOpenProp }) => {
 
     return (
         <Section id='home'>
+            <title>NN Consulti</title>
             <MobileHeader>
                 <ul>
                     <li>
