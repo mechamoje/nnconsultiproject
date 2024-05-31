@@ -58,6 +58,7 @@ export default function Diferenciais() {
         text='Conheça nossas condições'
         url={links.whatsappLink}
         target
+        alternative
       ></Button>
     </Section>
   );

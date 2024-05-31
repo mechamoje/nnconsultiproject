@@ -37,6 +37,7 @@ export default function Entrega() {
           text='Entre em contato'
           url={links.whatsappLink}
           target
+          alternative
         ></Button>
         <small> Exceto para a região Norte. </small>
       </Container>
