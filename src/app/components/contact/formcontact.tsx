@@ -142,7 +142,7 @@ export const Contact = () => {
             onChange={handleChange}
           />
         </InputsContainers>
-        <Button onSubmit={handleSubmit} type='submit' text={'Enviar'} />
+        <Button onSubmit={handleSubmit} text={'Enviar'} />
       </Form>
       <figure>
         <Image
