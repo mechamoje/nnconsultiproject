@@ -46,8 +46,8 @@ const IconContainer = styled.div`
     border-radius: 20%;
     box-shadow: ${shadows.boxesShadow};
     padding: 10px;
-    color: ${colors.darkYellow};
-    fill: ${colors.darkYellow};
+    color: ${colors.black};
+    fill: ${colors.black};
 
     &:hover {
       color: ${colors.gray};

@@ -46,7 +46,7 @@ export const Contact = () => {
   useEffect(() => {
     setFormData((prevData) => ({
       ...prevData,
-      message: `Olá, gostaria de mais informações sobre ${title || 'seus serviços'}`,
+      message: `Olá, quero informações sobre ${title || 'seus serviços'}`,
     }));
   }, [title]);
 
@@ -212,6 +212,7 @@ const Form = styled.form`
 
   input[name='message'] {
     height: 3.4375em !important;
+
   }
   button {
     background-color: ${colors.yellow};

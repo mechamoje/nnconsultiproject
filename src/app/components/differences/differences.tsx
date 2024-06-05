@@ -22,8 +22,8 @@ export default function Diferenciais() {
             height={200}
             alt='Picture of the author'
           />
-          <h4> Despacho imediato </h4>
-          <p> Despachamos seu pedido em até 48hrs após a confirmação </p>
+          <h4> Envio imediato </h4>
+          <p> Enviamos seu pedido em até 48hrs após a confirmação </p>
         </DifferencesItem>
 
         <DifferencesItem>
